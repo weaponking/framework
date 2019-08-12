@@ -13,6 +13,9 @@
         <module>framework-mybatis</module>
         <module>framework-core</module>
         <module>framework-mybatis-generate</module>
+        <module>framework-redis</module>
+        <module>framework-kafka</module>
+        <module>framework-hbase</module>
     </modules>
 
     <name>framework</name>
@@ -111,6 +114,12 @@
             <dependency>
                 <groupId>com.framework</groupId>
                 <artifactId>framework-core</artifactId>
+                <version>${pro.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.framework</groupId>
+                <artifactId>framework-redis</artifactId>
                 <version>${pro.version}</version>
             </dependency>
         </dependencies>

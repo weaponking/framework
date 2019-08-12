@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.framework.sys.mapper.SysMenuMapper">
+
+    <sql id="table_column">
+        id, menuName, menuType, menuIcon, menuPerm, menuUrl, menuDesc, parentId, delFlag, sortBy, createTime, updateTime
+    </sql>
+
+    <resultMap id="objMap" type="com.frame.sys.vo.SysMenu">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="menuName" jdbcType="VARCHAR" property="menuName" />
+        <result column="menuType" jdbcType="CHAR" property="menuType" />
+        <result column="menuIcon" jdbcType="VARCHAR" property="menuIcon" />
+        <result column="menuPerm" jdbcType="VARCHAR" property="menuPerm" />
+        <result column="menuUrl" jdbcType="VARCHAR" property="menuUrl" />
+        <result column="menuDesc" jdbcType="VARCHAR" property="menuDesc" />
+        <result column="parentId" jdbcType="BIGINT" property="parentId" />
+        <result column="delFlag" jdbcType="CHAR" property="delFlag" />
+        <result column="sortBy" jdbcType="BIGINT" property="sortBy" />
+        <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+    </resultMap>
+
+    <select id="queryById" resultMap="objMap">
+        SELECT
+            <include refid="table_column"/>
+        FROM
+            sys_menu
+        WHERE
+            id = #{id}
+    </select>
+
+    <insert id="add" parameterType="SysMenu">
+        INSERT INTO
+            sys_menu(menuName, menuType, menuIcon, menuPerm, menuUrl, menuDesc, parentId, delFlag, sortBy, createTime, updateTime)
+        VALUES
+            (
+                #{menuName,jdbcType=VARCHAR}, #{menuType,jdbcType=CHAR},
+                #{menuIcon,jdbcType=VARCHAR}, #{menuPerm,jdbcType=VARCHAR},
+                #{menuUrl,jdbcType=VARCHAR}, #{menuDesc,jdbcType=VARCHAR},
+                #{parentId,jdbcType=BIGINT}, #{delFlag,jdbcType=CHAR},
+                #{sortBy,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP},
+                #{updateTime,jdbcType=TIMESTAMP}
+            )
+    </insert>
+
+    <update id="updateDelFlag">
+        UPDATE
+            sys_menu
+        SET
+            delFlag = #{delFlag, jdbcType=CHAR}
+        WHERE
+            id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateDetail" parameterType="SysMenu">
+        UPDATE
+            sys_menu
+        SET
+            menuName = #{menuName,jdbcType=VARCHAR},
+            menuType = #{menuType,jdbcType=CHAR},
+            menuIcon = #{menuIcon,jdbcType=VARCHAR},
+            menuPerm = #{menuPerm,jdbcType=VARCHAR},
+            menuUrl = #{menuUrl,jdbcType=VARCHAR},
+            menuDesc = #{menuDesc,jdbcType=VARCHAR},
+            parentId = #{parentId,jdbcType=BIGINT},
+            delFlag = #{delFlag,jdbcType=CHAR},
+            sortBy = #{sortBy,jdbcType=BIGINT},
+            createTime = #{createTime,jdbcType=TIMESTAMP},
+            updateTime = #{updateTime,jdbcType=TIMESTAMP}
+        WHERE
+            id = #{id,jdbcType=BIGINT}
+    </update>
+
+
+</mapper>
