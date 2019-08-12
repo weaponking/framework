@@ -1,0 +1,5 @@
+#shiro 配置
+password.algorithmName=md5
+password.hashIterations=2
+password.retryCount=5
+rememberMeCookie.maxage=2592000
