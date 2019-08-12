@@ -1,6 +1,0 @@
-com/framework/shiro/service/ShiroService.class
-com/framework/shiro/util/PasswordUtil.class
-com/framework/shiro/filter/CustomFormAuthenticationFilter.class
-com/framework/shiro/realm/UserRealm.class
-com/framework/shiro/filter/RetryLimitCredentialsMatcher.class
-com/framework/shiro/vo/ShiroUser.class
