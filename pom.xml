@@ -132,6 +132,12 @@
                 <artifactId>framework-zk</artifactId>
                 <version>${pro.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.framework</groupId>
+                <artifactId>framework-dubbo</artifactId>
+                <version>${pro.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

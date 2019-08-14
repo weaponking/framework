@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <title>登录</title>
+</head>
+<body>
+
+<div class="error">${error}</div>
+<form action="" method="post">
+    用户名：<input type="text" name="loginId"><br/>
+    密码：<input type="password" name="password"><br/>
+    自动登录：<input type="checkbox" name="rememberMe" value="true"><br/>
+    <input type="submit" value="登录">
+</form>
+
+</body>
