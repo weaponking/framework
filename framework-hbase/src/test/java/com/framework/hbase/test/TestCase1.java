@@ -10,6 +10,7 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.junit.Test;
 import java.io.IOException;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 public class TestCase1 {
@@ -41,4 +42,5 @@ public class TestCase1 {
             }
         }
     }
+    ConcurrentHashMap map;
 }

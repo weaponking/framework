@@ -16,6 +16,10 @@
         <module>framework-redis</module>
         <module>framework-kafka</module>
         <module>framework-hbase</module>
+        <module>framework-test</module>
+        <module>framework-web</module>
+        <module>framework-zk</module>
+        <module>framework-dubbo</module>
     </modules>
 
     <name>framework</name>
@@ -120,6 +124,12 @@
             <dependency>
                 <groupId>com.framework</groupId>
                 <artifactId>framework-redis</artifactId>
+                <version>${pro.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.framework</groupId>
+                <artifactId>framework-zk</artifactId>
                 <version>${pro.version}</version>
             </dependency>
         </dependencies>
