@@ -41,7 +41,7 @@ public class TestCase {
             }
         });
 
-        template.send(new ProducerRecord<>("test", "hello world1"));
+        template.send(new ProducerRecord<>("mytest", "hello world1"));
         template.flush();
     }
 }
