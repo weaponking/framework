@@ -41,6 +41,8 @@
         <spring.version>5.1.8.RELEASE</spring.version>
         <aspect.version>1.9.4</aspect.version>
         <cglib.version>3.1</cglib.version>
+        <lang3.version>3.6</lang3.version>
+        <collections.version>4.4</collections.version>
     </properties>
 
     <dependencyManagement>
@@ -100,6 +102,19 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
+            </dependency>
+
+            <!-- util -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${collections.version}</version>
             </dependency>
 
             <!--project module -->
