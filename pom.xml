@@ -38,7 +38,7 @@
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.26</slf4j.version>
         <pro.version>1.0</pro.version>
-        <spring.version>5.1.8.RELEASE</spring.version>
+        <spring.version>5.1.18.RELEASE</spring.version>
         <aspect.version>1.9.4</aspect.version>
         <cglib.version>3.1</cglib.version>
         <lang3.version>3.6</lang3.version>
